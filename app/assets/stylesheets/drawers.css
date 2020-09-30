@@ -52,6 +52,13 @@ li {
   padding: 10px 15px;
   box-sizing: border-box;
 }
+.chat-comment-form__input {
+  float: left;
+  width: 100%;
+  line-height: 90px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
 .chat-room-form__action-btn {
   display: inline-block;
   padding: 12px 20px;

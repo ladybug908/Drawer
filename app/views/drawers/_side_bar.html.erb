@@ -5,15 +5,21 @@
     <% end %>
   </div>
   <div class="create-drawer">
-      <%#= link_to "新しい引き出しを作る", new_drawer_path %>
+      <%= link_to "新しい引き出しを作る", new_drawer_path %>
   </div>
 </div>
 
 <div class="drawers">
-  <% current_user.drawers.each do |title| %>
+  <% @drawers.each do |drawer| %>
     <div class="side-drawer">
-      <div class="drawer-name">
-        <a href="#"><%= drawer.title %></a>
+      <div class="drawer-title">
+        <%=link_to drawer.title, drawer_path(:id) %>
+        <div class="drawer-user-name">
+        <%= drawer.user.name %>
+        </div>
+        <div class="message-date">
+          <%= l drawer.created_at %>
+        </div>
       </div>
     </div>
    <% end %>
