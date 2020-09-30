@@ -1,0 +1,67 @@
+<div class='chat-room-form'>
+  <h1>新しい引き出し</h1>
+  <%=form_with model: @partition, local: true do |f|%>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :タイトル, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :title, class: 'chat__room_name chat-room-form__input', placeholder: 'タイトルを入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :カテゴリー, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :category, class: 'chat__room_name chat-room-form__input', placeholder: 'カテゴリーを入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :画像1, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :画像2, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :画像3, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :画像4, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
+      </div>
+    </div>
+     <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :コメント, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :comment, class: 'chat__room_name chat-comment-form__input', placeholder: 'コメントを入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>

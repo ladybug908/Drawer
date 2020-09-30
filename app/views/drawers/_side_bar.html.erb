@@ -5,20 +5,17 @@
     <% end %>
   </div>
   <div class="create-drawer">
-      <%= link_to "新しい引き出しを作る", new_drawer_path %>
+      <%= link_to "新しい引き出しを作る", new_partition_path %>
   </div>
 </div>
 
 <div class="drawers">
-  <% @drawers.each do |drawer| %>
+  <% current_user.partitions.each do |partition| %>
     <div class="side-drawer">
       <div class="drawer-title">
-        <%=link_to drawer.title, drawer_path(:id) %>
-        <div class="drawer-user-name">
-        <%= drawer.user.name %>
-        </div>
+        <%= link_to partition.title, partitions_path(partition) %>
         <div class="message-date">
-          <%= l drawer.created_at %>
+          <%= l partition.created_at %>
         </div>
       </div>
     </div>

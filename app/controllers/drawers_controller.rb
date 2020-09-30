@@ -3,8 +3,9 @@ class DrawersController < ApplicationController
   before_action :move_to_new_user_session, only: :new
 
   def index
-    #@drawers = current_user.drawers
-    @drawers = Drawer.all
+   # @message = Message.new
+    @partition = Partition.find(params[:partition_id])
+   # @messages = @room.messages.includes(:user)
   end
 
   def new
