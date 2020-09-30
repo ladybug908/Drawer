@@ -27,7 +27,7 @@ class DrawersController < ApplicationController
   private
 
   def drawer_params
-    params.require(:drawer).permit(:title, :category, :comment, image: [], user_ids: []).merge(user_id: current_user.id)
+    params.require(:drawer).permit(:title, :category, :comment, images: [], user_ids: []).merge(user_id: current_user.id)
   end
 
   def set_drawer
