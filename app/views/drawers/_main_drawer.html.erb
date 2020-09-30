@@ -1,7 +1,7 @@
 <div class="drawer-header">
    <div class="left-header">
     <div class="header-title">
-      
+      <%= @partition.title %>
     </div>
   </div>
   <div class="right-header">
@@ -9,7 +9,7 @@
       <a href="#">編集</a>
     </div>
     <div class="header-button">
-      <a href="#">削除</a>
+      <%= link_to "削除", partition_path(@partition), method: :delete %>
     </div>
   </div>
 </div>

@@ -15,6 +15,12 @@ class PartitionsController < ApplicationController
     end
   end
 
+  def destroy
+    partition = Partition.find(params[:id])
+    partition.destroy
+    redirect_to root_path
+  end
+
   private
 
   def partition_params
