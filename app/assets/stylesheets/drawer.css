@@ -94,7 +94,7 @@
 
 .main-drawer {
   background-color: #FAFAFA;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 100px - 180px);
   padding: 46px 40px 0;
   overflow: scroll;
 }
@@ -130,6 +130,19 @@
 
 .form {
   background-color: #DDDDDD;
-  height: 90px;
+  height: 180px;
   padding: 20px 40px;
+  display: flex;
+}
+
+.form-comment-up {
+  background-color: white;
+  width: 100%;
+}
+
+.form-comment {
+  border: none;
+  height: 150px;
+  width: 100%;
+  padding-left: 10px;
 }
