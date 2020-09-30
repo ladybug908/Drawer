@@ -1,6 +1,6 @@
-class CreateDrawers < ActiveRecord::Migration[6.0]
+class CreatePartitions < ActiveRecord::Migration[6.0]
   def change
-    create_table :drawers do |t|
+    create_table :partitions do |t|
       t.string :title,    null: false
       t.string :category, null: false
       t.text   :comment

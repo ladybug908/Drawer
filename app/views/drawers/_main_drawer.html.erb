@@ -1,7 +1,7 @@
 <div class="drawer-header">
    <div class="left-header">
     <div class="header-title">
-      hogefuga
+      <%= @partition.title %>
     </div>
   </div>
   <div class="right-header">
@@ -9,43 +9,13 @@
       <a href="#">編集</a>
     </div>
     <div class="header-button">
-      <a href="#">削除</a>
+      <%= link_to "削除", partition_path(@partition), method: :delete %>
     </div>
   </div>
 </div>
 
 <div class="main-drawer">
-  <div class="categorys">
-    <div class="upper-category">
-      <div class="category">
-        Tom
-      </div>
-      <div class="drawer-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Tom
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'drawer' %>
 </div>
 
 <div class="form">

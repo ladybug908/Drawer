@@ -24,7 +24,7 @@ li {
 }
 
 .chat-room-form {
-  width: 1200px;
+  width: 980px;
   margin: 60px auto;
   padding: 40px;
   background-color: #fff;
@@ -49,13 +49,6 @@ li {
   float: left;
   width: 100%;
   line-height: 30px;
-  padding: 10px 15px;
-  box-sizing: border-box;
-}
-.chat-comment-form__input {
-  float: left;
-  width: 60%;
-  line-height: 90px;
   padding: 10px 15px;
   box-sizing: border-box;
 }

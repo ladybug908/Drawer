@@ -1,4 +1,4 @@
-class Drawer < ApplicationRecord
+class Partition < ApplicationRecord
   belongs_to :user
   has_many_attached :images
 end

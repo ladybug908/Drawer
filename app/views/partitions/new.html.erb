@@ -1,6 +1,6 @@
 <div class='chat-room-form'>
   <h1>新しい引き出し</h1>
-  <%=form_with model: @drawer, local: true do |f|%>
+  <%=form_with model: @partition, local: true do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <%= f.label :タイトル, class: 'chat-room-form__label'%>
@@ -22,7 +22,7 @@
         <%= f.label :画像1, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.file_field :image, name: 'drawer[images][]', id: 'drawer_image' %>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
       </div>
     </div>
     <div class='chat-room-form__field'>
@@ -30,7 +30,7 @@
         <%= f.label :画像2, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.file_field :image, name: 'drawer[images][]', id: 'drawer_image' %>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
       </div>
     </div>
     <div class='chat-room-form__field'>
@@ -38,7 +38,7 @@
         <%= f.label :画像3, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.file_field :image, name: 'drawer[images][]', id: 'drawer_image' %>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
       </div>
     </div>
     <div class='chat-room-form__field'>
@@ -46,7 +46,7 @@
         <%= f.label :画像4, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.file_field :image, name: 'drawer[images][]', id: 'drawer_image' %>
+        <%= f.file_field :image, name: 'partition[images][]', id: 'partition_image' %>
       </div>
     </div>
      <div class='chat-room-form__field'>
