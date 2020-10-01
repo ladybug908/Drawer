@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   resources :partitions, only: [:new, :create, :destroy] do
     resources :drawers, only: :index
+    collection do
+      get 'search'
+    end
   end
+
 end

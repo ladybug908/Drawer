@@ -21,6 +21,10 @@ class PartitionsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @partitions = Partition.search(params[:keyword])
+  end
+
   private
 
   def partition_params
