@@ -18,7 +18,7 @@
   <% @partitions.each do |partition| %>
     <div class="side-drawer">
       <div class="drawer-title">
-        <%= link_to partition.title, partition_drawers_path(partition.id) %>
+        <%= link_to partition.title, partition_path(partition) %>
         <div class="message-date">
           <%= l partition.created_at %>
         </div>

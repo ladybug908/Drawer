@@ -1,5 +1,6 @@
 class Partition < ApplicationRecord
   belongs_to :user
+  has_many :drawers
   has_many_attached :images
 
   def self.search(search)

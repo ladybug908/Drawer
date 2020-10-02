@@ -1,5 +1,6 @@
 class PartitionsController < ApplicationController
   def index
+    @partitions = Partition.all
   end
 
   def new
@@ -19,6 +20,11 @@ class PartitionsController < ApplicationController
     partition = Partition.find(params[:id])
     partition.destroy
     redirect_to root_path
+  end
+
+  def show
+    @partitions = Partition.all
+    @partition = Partition.find(params[:id])
   end
 
   def search
