@@ -10,11 +10,13 @@
           <%= @partition.title %>
         </div>
       </div>
+      <% if user_signed_in? && current_user.id == @partition.user_id %>
       <div class="right-header">
         <div class="header-button">
           <%= link_to "削除", partition_path(@partition), method: :delete %>
         </div>
       </div>
+      <% end %>
     </div>
 
     <div class="main-drawer">
