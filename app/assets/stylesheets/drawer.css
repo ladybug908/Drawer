@@ -10,15 +10,15 @@
 .side-bar-header {
   height: 65px;
   padding: 0 20px;
-  background-color: #253141;
+  background-color: greenyellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .header-name a{
-  font-size: 16px;
-  color: #FAFAFA;
+  font-size: 24px;
+  color: black;
   text-decoration: none;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .create-drawer a {
-  border: 1px solid lightblue;
+  border: 1px solid blue;
   padding: 14px;
   color: deepskyblue;
   text-decoration: none;
@@ -35,10 +35,11 @@
 
 .search-form {
   padding: 5px 20px;
+  background-color: greenyellow;
 }
 
 .drawers {
-  background-color: #2F3E51;
+  background-color: #93e68c;
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
@@ -68,6 +69,7 @@
   width: calc(100% - 300px);
 }
 .drawer-header {
+  background-color: #93e68c;
   height: 100px;
   padding: 0 40px;
   display: flex;
@@ -97,10 +99,21 @@
 }
 
 .main-drawer {
-  background-color: #FAFAFA;
   height: calc(100vh - 100px - 180px);
-  padding: 46px 40px 0;
+  padding: 46px 40px;
   overflow: scroll;
+}
+
+.grid{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 90%;
+  width: 90%;
+}
+
+.message-image{
+  margin: 20px 10px;
 }
 
 .categorys {

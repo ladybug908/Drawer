@@ -20,9 +20,11 @@
     <div class="main-drawer">
       <%#= render partial: 'drawers/drawer' %>
       <div class="drawer">
-        <% @partition.images.each do |image| %>
-          <%= image_tag image.variant(resize:'250x250'), class: 'message-image' %>
-        <% end %>
+        <div class="grid">
+          <% @partition.images.each do |image| %>
+            <%= image_tag image.variant(resize:'250x250'), class: 'message-image' %>
+          <% end %>
+        </div>
       </div>
     </div>
 
