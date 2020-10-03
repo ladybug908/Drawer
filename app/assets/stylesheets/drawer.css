@@ -35,13 +35,29 @@
 
 .side-bar-search{
   height: 100px;
-  padding: 0 20px;
+  padding: 15px;
   background-color: green;
+  color: white;
 }
 
 .search-form {
   padding: 10px;
   background-color: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-list select {
+  width: 180px;
+  height: 30px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.collection_select{
+  width: 200px;
+  height: 25px;
 }
 
 .drawers {

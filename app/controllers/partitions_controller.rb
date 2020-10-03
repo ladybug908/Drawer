@@ -1,6 +1,12 @@
 class PartitionsController < ApplicationController
+
+  before_action :search_product
+
   def index
+    @users = User.all
     @partitions = Partition.all
+    set_user_column
+    set_created_at_column
   end
 
   def new
@@ -28,7 +34,8 @@ class PartitionsController < ApplicationController
   end
 
   def search
-    @partitions = Partition.search(params[:keyword])
+    @results = @p.result.includes(:user)
+    #@partitions = Partition.search(params[:keyword])
   end
 
   private
@@ -36,4 +43,17 @@ class PartitionsController < ApplicationController
   def partition_params
     params.require(:partition).permit(:title, :category, :comment, images: [], user_ids: []).merge(user_id: current_user.id)
   end
+
+  def search_product
+    @p = Partition.ransack(params[:q])  # 検索オブジェクトを生成
+  end
+
+  def set_user_column
+    @user_name = User.select("name").distinct
+  end
+
+  def set_created_at_column
+    @partition_created_at = Partition.select("created_at").distinct
+  end
+
 end
