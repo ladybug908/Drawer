@@ -8,7 +8,7 @@
 }
 
 .side-bar-header {
-  height: 65px;
+  height: 100px;
   padding: 0 20px;
   background-color: greenyellow;
   display: flex;
@@ -29,18 +29,24 @@
 .create-drawer a {
   border: 1px solid blue;
   padding: 14px;
-  color: deepskyblue;
+  color: blue;
   text-decoration: none;
 }
 
+.side-bar-search{
+  height: 100px;
+  padding: 0 20px;
+  background-color: green;
+}
+
 .search-form {
-  padding: 5px 20px;
-  background-color: greenyellow;
+  padding: 10px;
+  background-color: green;
 }
 
 .drawers {
   background-color: #93e68c;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 200px);
   padding: 0 20px;
   overflow: scroll;
 }
@@ -76,10 +82,17 @@
   justify-content: space-between;
 }
 
+.left-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .header-title {
   color: #333;
   font-size: 24px;
   margin-top: 36px;
+  margin-right: 40px;
 }
 
 .right-header{

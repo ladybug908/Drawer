@@ -7,7 +7,16 @@
     <div class="drawer-header">
       <div class="left-header">
         <div class="header-title">
+          <%= "★店名：" %>
+          <%= @partition.user.name %>
+        </div>
+        <div class="header-title">
+          <%= "★タイトル：" %>
           <%= @partition.title %>
+        </div>
+        <div class="header-title">
+          <%= "作成日：" %>
+          <%= l @partition.created_at %>
         </div>
       </div>
       <% if user_signed_in? && current_user.id == @partition.user_id %>
