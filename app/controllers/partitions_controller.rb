@@ -31,11 +31,19 @@ class PartitionsController < ApplicationController
   def show
     @partitions = Partition.all
     @partition = Partition.find(params[:id])
+    @results = @p.result.includes(:user)
+    set_user_column
+    set_created_at_column
   end
 
   def search
-    @results = @p.result.includes(:user)
     #@partitions = Partition.search(params[:keyword])
+    @partitions = Partition.all
+    #@partition = Partition.find(params[:id])
+    @results = @p.result.includes(:user)
+    set_user_column
+    set_created_at_column
+
   end
 
   private
