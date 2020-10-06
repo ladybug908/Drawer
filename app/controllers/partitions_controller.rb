@@ -4,7 +4,7 @@ class PartitionsController < ApplicationController
 
   def index
     @users = User.all
-    @partitions = Partition.all
+    @partitions = Partition.all.order('created_at DESC')
     set_user_column
     set_created_at_column
   end
