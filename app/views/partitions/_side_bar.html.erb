@@ -1,0 +1,40 @@
+<div class="side-bar-header">
+  <div class="header-name">
+    <%= link_to edit_user_path(current_user) do %>
+      <%= current_user.name %>
+    <% end %>
+  </div>
+  <div class="create-drawer">
+      <%= link_to "新しい引き出しを作る", new_partition_path %>
+  </div>
+</div>
+
+<div class="side-bar-search">
+  <%= search_form_for @p, url: search_partitions_path do |f| %>
+    <div class="search-list">
+    <%= f.label :user_name_eq, '店名:' %>
+      <%= f.collection_select :user_name_eq, @user_name, :name, :name,  include_blank: '指定なし' %>
+    <%= f.submit '検索' %>
+    </div>
+  <% end %>
+  <%= search_form_for @p, url: search_partitions_path do |f| %>
+    <div class="search-list">
+    <%= f.label :created_at_eq, '日時:' %>
+      <%= f.collection_select :created_at_eq, @partition_created_at, :created_at, :created_at, include_blank: '指定なし' %>
+    <%= f.submit '検索' %>
+    </div>
+  <% end %>
+</div>
+
+<div class="drawers">
+  <% @partitions.each do |partition| %>
+    <div class="side-drawer">
+      <div class="drawer-title">
+        <%= link_to partition.title, partition_path(partition) %>
+        <div class="message-date">
+          <%= l partition.created_at %>
+        </div>
+      </div>
+    </div>
+   <% end %>
+</div>

@@ -1,0 +1,50 @@
+<div class='wrapper'>
+  <div class='side-bar'>
+    <%= render "side_bar" %>
+  </div>
+
+  <div class="drawer">
+    <div class="drawer-header">
+      <div class="left-header">
+        <div class="header-title">
+          <%= "★店名：" %>
+          <%= @partition.user.name %>
+        </div>
+        <div class="header-title">
+          <%= "★タイトル：" %>
+          <%= @partition.title %>
+        </div>
+        <div class="header-title">
+          <%= "作成日：" %>
+          <%= l @partition.created_at %>
+        </div>
+      </div>
+      <% if user_signed_in? && current_user.id == @partition.user_id %>
+      <div class="right-header">
+        <div class="header-button">
+          <%= link_to "削除", partition_path(@partition), method: :delete %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="main-drawer">
+      <%#= render partial: 'drawers/drawer' %>
+      <div class="drawer">
+        <div class="grid">
+          <% @partition.images.each do |image| %>
+            <%= image_tag image.variant(resize:'250x250'), class: 'message-image' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="form-comment-up">
+        <div class='form-comment'>
+          <%= @partition.comment %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

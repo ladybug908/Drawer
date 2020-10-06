@@ -9,11 +9,16 @@
   </div>
 </div>
 
+<%= form_with(url: root_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+
 <div class="drawers">
-  <% current_user.partitions.each do |partition| %>
+  <% @partitions.each do |partition| %>
     <div class="side-drawer">
       <div class="drawer-title">
-        <%= link_to partition.title, partition_drawers_path(partition) %>
+        <%= link_to partition.title, partition_drawers_path(partition.id) %>
         <div class="message-date">
           <%= l partition.created_at %>
         </div>
